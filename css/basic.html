@@ -39,10 +39,29 @@
         .fixed{
             background: red;
             position:fixed;
-            bottom:1px;
-
-
+            right:10px;
+            bottom:10px;
         }
+        .parent{
+            position: relative;
+            border:2px solid red;
+            left:20px;
+            top:15px;
+            width:300px;
+            height: 30vh;
+            background-color: aqua;
+        }
+        .child{
+            position: absolute;
+            border: 2px darkgoldenrod;
+            top:50px;
+            left:100px;
+            width:100px;
+            height:100px;
+            background-color: pink;
+            border:2px dotted red;
+
+        
         </style>
 </head>
 <body>
@@ -54,7 +73,14 @@
         Lorem ipsum dolor sit amet consectetur adipisicing..
     </div>
     </div>-->
-    <div class="fixed">fixed</div>
+    
     <div class="sticky">sticky</div>
+    <div class ="parent">
+        relative
+        <div class="child">
+            absolute
+        </div>
+    </div>
+    <div class="fixed">fixed</div>
 </body>
 </html>
