@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
-    <link rel="icon" href="../css/1.png">
+    <link rel="icon" href="C:\Mern\css\1.png">
 </head>
 <body>
-    <script src="./script.js"></script>
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <!-- <p class="para">Lorem ipsum dolor sit amet.</p> -->
+     <p class="para1">Lorem ipsum dolor sit amet.</p>
+     <ul id="list">
+
+     </ul>
+     <button id="btn">click</button>
+    <script>
+        const btn=document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            const li=document.createElement("li");
+            li.innerText="new li Element";
+            document.getElementById("list").append(li);
+        })
+    //     const li=document.createElement("li");
+    //  li.innertext="new li Element";
+    //  document.getElementById("list").append(li);
+    //     // document.getElementById("para").textcontent="hello world"
+    //     // document.getElementById("para").innerText="hello world"
+    // document.getElementById("para").innerHTML="<p>helloworld</p>"
+    // var para=document.getElementById("para");
+    // console.log(para);
+    // para.style.color="Red"
+    // para.style.backgroundColor="green"
+    // pera.style.fontsize="20p"
+    // var para1=document.getElementsByClassName("para1");
+    // console.log(para1);
+     
+    </script>
 </body>
 </html>
