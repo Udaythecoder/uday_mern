@@ -11,6 +11,7 @@ const Navbar = () => {
                 <li className="list"> <Link to="/about" className="link"> About</Link> </li>
                 <li className="list"> <Link to="/contact" className="link"> Contact</Link></li>
                 <li className="list"> <Link to="/service" className="link"> Service </Link> </li>
+                <li className="list"> <Link to="/useState" className="link"> useState </Link> </li>
             </ul>
         </nav>
     </div>

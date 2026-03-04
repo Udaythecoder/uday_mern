@@ -1,5 +1,5 @@
 import React from 'react'
-import Parent from '../components/Parent'
+import Parent from '../Components/Parent'
 
 const About = () => {
      const ele=<div>Hello world..</div>
