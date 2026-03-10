@@ -1,22 +1,47 @@
-import Parent from "./Components/Parent"
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Home from "./Pages/Home";
-import Service from "./Pages/Service";
-import Navbar from "./Components/Navbar";
+import React from 'react'
+import Parent  from "./components/Parent"
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import Services from './Pages/Service'
+import Navbar from './Components/Navbar'
 import State from './hooks/State'
+import Hooks from './hooks/Hooks'
 import {Routes,Route} from 'react-router-dom'
+import Form from './hooks/Form'
+import Effect from './hooks/Effect'
+import EffectWithApi from './hooks/Effectwithapi'
+import Login from './auth/Login'
+import Signup from './auth/Signup'
+import Ref from './hooks/Ref'
+import Reducer from './hooks/Reducer'
+import Memo from './hooks/Memo'
+import Callback from './hooks/Callback'
+import Todo from './Components/Todo'
 const App = () => {
-  
+ 
   return (
-    <>
-    <Navbar />
+    <> 
+  <Navbar/> 
     <Routes>
-      <Route path="/" element={<Home/>}/><Route/>
-      <Route path="/Contact" element={<Contact/>}/>
-      <Route path="/About" element={<About/>}/>
-      <Route path="/Service" element={<Service/>}/>
-      <Route path="/useState" element={<State/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}></Route>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/services' element={<Services/>}/>
+      <Route path='/todo' element={<Todo/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      {/* Nested route */}
+      <Route path='/Hooks' element={<Hooks/>}>
+      <Route path='useState' element={<State/>}/>
+      <Route path='form' element={<Form/>}/>
+      <Route path='effect' element={<Effect/>}/>
+      <Route path='effectwithapi' element={<EffectWithApi/>}/>
+      <Route path='ref' element={<Ref/>}/>
+      <Route path='reducer' element={<Reducer/>}/>
+      <Route path='memo' element={<Memo/>}/>
+      <Route path='callback' element={<Callback/>}/>
+      </Route>
     </Routes>
     </>
   )
