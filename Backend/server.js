@@ -1,8 +1,6 @@
 const express=require('express');
 const connectDB=require('./config/db');
 const dotenv =require('dotenv')
-const { connect } = require('mongoose');
-
 const app=express();
 const egRouters=require('./routers/egRouter')
 const userRouters=require('./routers/userRouter')
