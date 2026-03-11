@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import axios from 'axios'
+
 const Todo = () => {
     const [task,setTask]=useState('');
     const [todos,setTodos]=useState([])
-    
-    const API=`https://uday-mern-project.onrender.com/api/todo/`
+    const[edit,setEdit]=useState(null);
+    const API=`https://uday-mern-1.onrender.com/api/todo/`
 
     const fetchTodo=async()=>{
         const res= await axios.get(`${API}`)
@@ -14,14 +15,14 @@ const Todo = () => {
         useEffect(()=>{
             fetchTodo()
         },[])
-    const[edit,setEdit]=useState(null);
+    
     const handleAddoredit=async()=>{
         if(edit){
-            await axios.put(`${API}update${edit}`,{task})
+            await axios.put(`${API}update/${edit}`,{task})
             setEdit(null);
         }
         else{
-            await axios.post(`${API}create/`,{task})
+            await axios.post(`${API}create`,{task})
         }
         setTask('');
         fetchTodo();
@@ -42,7 +43,7 @@ const Todo = () => {
         placeholder='Enter the task'
         value={task} 
         onChange={(e)=>setTask(e.target.value)} />
-        <button onClick={handleAddoredit}>{edit||edit==0?"update":"add"}</button>
+        <button onClick={()=>handleAddoredit()}>{edit?"update":"add"}</button>
         <ul>
             {todos.map((todo)=>(
                 <li key={todo._id}>
