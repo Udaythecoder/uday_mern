@@ -7,12 +7,13 @@ const userRouters=require('./routers/userRouter')
 const todoRouters =require('./routers/todoRouters')
 const cors=require('cors')
 dotenv.config();
+app.use(cors())
 connectDB();
 app.use(express.json());
 app.use(egRouters);
 app.use('/api/user',userRouters);
 app.use('/api/todo',todoRouters);
-app.use(cors())
+
 
 const PORT=process.env.PORT;
 app.listen(PORT,()=>{
