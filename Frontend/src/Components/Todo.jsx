@@ -5,7 +5,7 @@ const Todo = () => {
     const [task,setTask]=useState('');
     const [todos,setTodos]=useState([])
     
-    const API=`https://uday-mern.onrender.com/api/todo/`
+    const API=`https://uday-mern-project.onrender.com/api/todo/`
 
     const fetchTodo=async()=>{
         const res= await axios.get(`${API}`)
